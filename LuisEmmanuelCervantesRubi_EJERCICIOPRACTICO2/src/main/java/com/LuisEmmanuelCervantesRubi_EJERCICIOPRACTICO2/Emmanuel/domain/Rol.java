@@ -4,41 +4,32 @@
  */
 package com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.io.Serializable;
-import java.util.List;
 import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Entity
 @Data
 //MAPEA LA TABLA PARA ASÍ PODER ACCEDER A LA MISMA
-@Table(name="Cliente")
-public class Usuario implements Serializable {
+@Table(name = "Roles")
+public class Rol implements Serializable{
+
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;    
-    @NotEmpty
-    private String nombre;    
-    @NotEmpty
-    private String apellido;
-    private String correo;
-    private String telefono;
-    private String nombre_usuario;
-    private String contrasena;    
-    private Long id_rol;
-    private boolean activo;
+    private Long idRol;
 
-//CREA UNA RELACIÓN ONE TO MANY CON LA TABLA roles
-    @OneToMany
-    @JoinColumn(name="id")
-    private List<Rol> roles;
+    @NotEmpty
+    private String nombre;
+
+//CON ESTE ESTABLECE LA CONEXIÓN CON EL USUARIO
+    @Column(name = "id")
+    private Long id;
 }

@@ -8,6 +8,6 @@ package com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.dao;
  *
  * @author Administrador
  */
-public interface RolesDao {
+public interface RolDao {
     
 }
