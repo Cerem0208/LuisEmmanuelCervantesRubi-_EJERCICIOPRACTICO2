@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/1999/xhtml">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Cerem Shop</title>        
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        
+        <div class="grid-container">
+            <div class="grid-item "> 
+                <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black">Irlanda</p>
+<iframe width="400" height="250" src="https://www.youtube.com/embed/ycDLfQ1Cv_Y?si=KBlrYv6l0Xrk9NQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+
+            <div class="grid-item ">
+                <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black"> Cartagena </p>
+<iframe width="400" height="250" src="https://www.youtube.com/embed/L34H6ycGMkY?si=z02n_heB6VzsfDFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+
+            <div class="grid-item">
+                <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black">Argentina</p>
+<iframe width="400" height="250" src="https://www.youtube.com/embed/YDL8HbY9ENU?si=ou5Yf1mQUJKKQx34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+
+
+        <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr; 
+                grid-gap: 10px; 
+                padding: 82px;
+            }
+
+            .grid-item {
+                padding: 10px;
+                text-align: center;
+            }
+
+            .grid-item .row1 {
+                padding: 10px;
+                text-align: center;
+                border: 1px solid black;
+
+            }
+
+        </style>         
+        
+        <footer th:replace="~{layout/plantilla :: footer}"/>          
+    </body>
+</html>
+
