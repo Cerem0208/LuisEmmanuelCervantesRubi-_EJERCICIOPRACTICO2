@@ -19,23 +19,15 @@ public class Vuelos {
     private String numero_vuelo;
     private String destino;
     private Date fecha_salida;
-    private boolean activo;
-
-//ESTABLECE UNA CONEXION CON EL DOMAIN USUARIO POR MEDIO DE SU ID
-    @ManyToOne
-    @JoinColumn(name = "id_cliente")
-    private Usuario usuario;
 
     public Vuelos() {
     }
 
-    public Vuelos(Long id_vuelo, String numero_vuelo, String destino, Date fecha_salida, boolean activo, Usuario usuario) {
+    public Vuelos(Long id_vuelo, String numero_vuelo, String destino, Date fecha_salida, Usuario usuario) {
         this.id_vuelo = id_vuelo;
         this.numero_vuelo = numero_vuelo;
         this.destino = destino;
         this.fecha_salida = fecha_salida;
-        this.activo = activo;
-        this.usuario = usuario;
     }
 
     public Long getId() {
@@ -69,22 +61,5 @@ public class Vuelos {
     public void setFecha_salida(Date fecha_salida) {
         this.fecha_salida = fecha_salida;
     }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
-
-    public Usuario getUsuario() {
-        return usuario;
-    }
-
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
-    }
-
     
 }

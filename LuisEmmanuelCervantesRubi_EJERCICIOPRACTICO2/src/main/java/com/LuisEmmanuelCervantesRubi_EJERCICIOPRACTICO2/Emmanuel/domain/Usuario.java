@@ -21,7 +21,7 @@ import lombok.Data;
 @Table(name = "Cliente")
 public class Usuario {
      @Id
-    private int id_cliente;    
+    private Long id_cliente;    
     private String nombre;    
     private String apellido;
     private String correo;
@@ -29,13 +29,13 @@ public class Usuario {
     private String nombre_usuario;
     private String contrasena;    
     private Long id_rol;
-    private boolean activo;
+    private Boolean activo;
 
     
     public Usuario() {
     }
 
-    public Usuario(int id_cliente, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contrasena, Long id_rol, boolean activo) {
+    public Usuario(Long id_cliente, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contrasena, Long id_rol, Boolean activo) {
         this.id_cliente = id_cliente;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -47,11 +47,11 @@ public class Usuario {
         this.activo = activo;
     }
     
-    public int getId() {
+    public Long getId() {
         return id_cliente;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id_cliente = id;
     }
 
@@ -111,11 +111,11 @@ public class Usuario {
         this.id_rol = id_rol;
     }
 
-    public boolean isActivo() {
+    public Boolean isActivo() {
         return activo;
     }
 
-    public void setActivo(boolean activo) {
+    public void setActivo(Boolean activo) {
         this.activo = activo;
     }    
     
