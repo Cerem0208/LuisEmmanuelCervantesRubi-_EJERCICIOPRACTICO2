@@ -61,6 +61,7 @@
                                     <th>Num Vuelo</th>
                                     <th>Destino</th>
                                     <th>Fecha salida</th>
+                                    <th>Compras</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -70,13 +71,16 @@
                                     <td th:text="${vuelo.numero_vuelo}"></td> 
                                     <td th:text="${vuelo.destino}"></td> 
                                     <td th:text="${#dates.format(vuelo.fecha_salida, 'dd/MM/yyyy')}"></td>
+                                    <td>
+                                        <a href="/compra/CompraRealizada" class="btn btn-primary">Comprar</a>
+                                    </td>
                                 </tr>
 
                             </tbody>
 
                         </table>
                         
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        
                         
                     </div>
                 </div>
