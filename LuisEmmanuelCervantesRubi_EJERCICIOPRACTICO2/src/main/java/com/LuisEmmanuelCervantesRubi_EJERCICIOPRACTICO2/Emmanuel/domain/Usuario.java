@@ -17,18 +17,12 @@ import javax.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Entity
-@Data
-//MAPEA LA TABLA PARA ASÍ PODER ACCEDER A LA MISMA
-@Table(name="Cliente")
-public class Usuario implements Serializable {
-    private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;    
-    @NotEmpty
+//MAPEA LA TABLA CLIENTE PARA INTERACTUAR CON SUS DATOS
+@Table(name = "Cliente")
+public class Usuario {
+     @Id
+    private int id_cliente;    
     private String nombre;    
-    @NotEmpty
     private String apellido;
     private String correo;
     private String telefono;
@@ -37,8 +31,96 @@ public class Usuario implements Serializable {
     private Long id_rol;
     private boolean activo;
 
-//CREA UNA RELACIÓN ONE TO MANY CON LA TABLA roles
-    @OneToMany
-    @JoinColumn(name="id")
-    private List<Rol> roles;
+    
+    public Usuario() {
+    }
+
+    public Usuario(int id_cliente, String nombre, String apellido, String correo, String telefono, String nombre_usuario, String contrasena, Long id_rol, boolean activo) {
+        this.id_cliente = id_cliente;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.nombre_usuario = nombre_usuario;
+        this.contrasena = contrasena;
+        this.id_rol = id_rol;
+        this.activo = activo;
+    }
+    
+    public int getId() {
+        return id_cliente;
+    }
+
+    public void setId(int id) {
+        this.id_cliente = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getNombre_usuario() {
+        return nombre_usuario;
+    }
+
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
+    }
+
+    public Long getId_rol() {
+        return id_rol;
+    }
+
+    public void setId_rol(Long id_rol) {
+        this.id_rol = id_rol;
+    }
+
+    public boolean isActivo() {
+        return activo;
+    }
+
+    public void setActivo(boolean activo) {
+        this.activo = activo;
+    }    
+    
+    
 }
+
+
+
