@@ -67,10 +67,11 @@ VALUES ('administrador'), ('usuario');
 -- Insertar datos de ejemplo en la tabla Cliente
 INSERT INTO Cliente (nombre, apellido, correo, telefono, nombre_usuario, contrasena, id_rol)
 VALUES
-    ('Juan', 'Pérez', 'juan@example.com', '123-456-7890', 'juan_perez', 'secretpassword', 2),
-    ('María', 'García', 'maria@example.com', '987-654-3210', 'maria_garcia', 'mypassword', 2),
-    ('Carlos', 'López', 'carlos@example.com', '555-123-4567', 'carlos_lopez', '123456', 2),
-    ('Admin', 'Admin', 'admin@example.com', '111-111-1111', 'admin', 'adminpassword', 1);
+    ('Juan', 'Pérez', 'juan@example.com', '123-456-7890', 'juan_perez', SHA2('secretpassword', 256), 2),
+    ('María', 'García', 'maria@example.com', '987-654-3210', 'maria_garcia', SHA2('mypassword', 256), 2),
+    ('Carlos', 'López', 'carlos@example.com', '555-123-4567', 'carlos_lopez', SHA2('123456', 256), 2),
+    ('Admin', 'Admin', 'admin@example.com', '111-111-1111', 'admin', SHA2('adminpassword', 256), 1);
+
     
 INSERT INTO Vuelos (numero_vuelo, destino, lugar_salida, hora_salida, fecha_salida, fecha_llegada, modelo_avion)
 VALUES 
