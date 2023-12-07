@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequestMapping("/sesion")
 public class SesionController {
 
+//BASICAMENTE ESTE CÓDIGO VERIFICA LOS DATOS DE INICIO DE SESIÓN, EN CASO DE QUE LOS DATOS SEAN ERRÓNEOS
+//LE DEVUELVE PARA QUE INTENTE DENUEVO, Y MANDA UN MENSAJE DE CREDENCIALES INVÁLIDOS
     @Autowired
     private UsuarioService authService;
 

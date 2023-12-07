@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 public class UsuarioServiceImpl implements UsuarioService {
     @Autowired
     private UsuarioDao usuarioDao;  
-
+//AUTENTICA EL USUARIO
     @Override
     public Usuario autenticarUsuario(String correo, String contrasena) {
 
         return usuarioDao.findByCorreoAndContrasena(correo, contrasena);
     }
-    
+    //GUARDA EL USUARIO
     @Override
     public Usuario save(Usuario nombre_usuario) {
         usuarioDao.save(nombre_usuario);

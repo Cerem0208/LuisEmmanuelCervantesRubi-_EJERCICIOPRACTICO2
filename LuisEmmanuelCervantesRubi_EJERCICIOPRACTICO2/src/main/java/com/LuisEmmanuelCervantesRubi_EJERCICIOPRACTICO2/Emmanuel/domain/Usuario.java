@@ -31,7 +31,7 @@ public class Usuario {
     private Long id_rol;
     private Boolean activo;
 
-    
+    //CONSTRUCTORES VACIOS Y COMPLETOS
     public Usuario() {
     }
 
@@ -47,6 +47,7 @@ public class Usuario {
         this.activo = activo;
     }
     
+    //GETTERS Y SETTERS
     public Long getId() {
         return id_cliente;
     }

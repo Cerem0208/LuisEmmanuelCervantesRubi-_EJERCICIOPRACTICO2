@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.controller;
 import com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.domain.Usuario;
 import com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.domain.Vuelos;
-import com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.service.UsuarioService;
 import com.LuisEmmanuelCervantesRubi_EJERCICIOPRACTICO2.Emmanuel.service.VueloService;
 import jakarta.servlet.http.HttpSession;
 import lombok.extern.slf4j.Slf4j;
@@ -15,8 +10,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+
+//ESTE CÓDIGO SE ENCARGA DE PERMITIR EL DISPLAY TANTO DE LOS DATOS DE USUARIO COMO LOS DATOS DE LOS VUELOS
 
 @Controller
 @Slf4j

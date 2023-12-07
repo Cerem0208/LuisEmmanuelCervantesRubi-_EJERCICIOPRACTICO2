@@ -9,12 +9,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/compra") //nombre de la carpeta
+@RequestMapping("/compra") //PIDE EL MAPEO DE LA TARJETA
 public class CompraRealizadaController {
-    @GetMapping("/CompraRealizada") //nombre del html
+    @GetMapping("/CompraRealizada") //MAPEA EL HTML
     public String acercade() {
 
-        return "/compra/CompraRealizada"; //Ruta completa
+        return "/compra/CompraRealizada"; //MUESTRA LA RUTA COMPLETA
     }
 }
 

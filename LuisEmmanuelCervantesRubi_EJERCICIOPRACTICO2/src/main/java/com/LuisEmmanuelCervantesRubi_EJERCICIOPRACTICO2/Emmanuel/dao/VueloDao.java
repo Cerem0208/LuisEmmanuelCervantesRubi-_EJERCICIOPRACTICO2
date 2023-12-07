@@ -9,5 +9,6 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface VueloDao extends JpaRepository<Vuelos, Long> {
+    //BUSCA TODOS LOS VUELOS ALMACENADOS
     List<Vuelos> findAll();
 }
