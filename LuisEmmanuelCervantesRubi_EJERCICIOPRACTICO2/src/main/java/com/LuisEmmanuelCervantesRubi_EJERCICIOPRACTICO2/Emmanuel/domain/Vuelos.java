@@ -23,19 +23,21 @@ public class Vuelos {
     public Vuelos() {
     }
 
-    public Vuelos(Long id_vuelo, String numero_vuelo, String destino, Date fecha_salida, Usuario usuario) {
+    public Vuelos(Long id_vuelo, String numero_vuelo, String destino, Date fecha_salida) {
         this.id_vuelo = id_vuelo;
         this.numero_vuelo = numero_vuelo;
         this.destino = destino;
         this.fecha_salida = fecha_salida;
     }
 
-    public Long getId() {
+    
+    
+    public Long getId_vuelo() {
         return id_vuelo;
     }
 
-    public void setId(Long id) {
-        this.id_vuelo = id;
+    public void setId_vuelo(Long id_vuelo) {
+        this.id_vuelo = id_vuelo;
     }
 
     public String getNumero_vuelo() {
@@ -61,5 +63,6 @@ public class Vuelos {
     public void setFecha_salida(Date fecha_salida) {
         this.fecha_salida = fecha_salida;
     }
+
     
 }
