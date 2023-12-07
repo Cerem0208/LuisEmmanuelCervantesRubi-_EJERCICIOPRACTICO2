@@ -2,29 +2,31 @@
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns="http://www.w3.org/1999/xhtml">
     <head th:replace="~{layout/plantilla :: head}">
-        <title>Cerem Shop</title>        
+        <title>FideFlights</title>        
     </head>
     <body>
+<!--SE LLAMA AL FRAGMENTO HEADER QUE SE ENCUENTRA EN LA RUTA layout/plantilla-->
         <header th:replace="~{layout/plantilla :: header}"/>
-        
+
+<!--CUERPO DEL HOME PAGE, CONTIENE 3 CONTENEDORES IGUALES LOS CUALES CONTIENEN UN VIDEO DE DESTINOS DISPONIBLES-->
         <div class="grid-container">
             <div class="grid-item "> 
                 <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black">Irlanda</p>
-<iframe width="400" height="250" src="https://www.youtube.com/embed/ycDLfQ1Cv_Y?si=KBlrYv6l0Xrk9NQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/ycDLfQ1Cv_Y?si=KBlrYv6l0Xrk9NQV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
 
             <div class="grid-item ">
                 <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black"> Cartagena </p>
-<iframe width="400" height="250" src="https://www.youtube.com/embed/L34H6ycGMkY?si=z02n_heB6VzsfDFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/L34H6ycGMkY?si=z02n_heB6VzsfDFp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
 
             <div class="grid-item">
                 <p style="width: 400px; color: white; font-weight: bold; font-size: 25px; background-color: #2069AD; margin-top: 0; text-align: center; border-bottom: 1px solid black">Argentina</p>
-<iframe width="400" height="250" src="https://www.youtube.com/embed/YDL8HbY9ENU?si=ou5Yf1mQUJKKQx34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe width="400" height="250" src="https://www.youtube.com/embed/YDL8HbY9ENU?si=ou5Yf1mQUJKKQx34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
             </div>
         </div>
 
-
+<!--ESTILO UTILIZADO PARA ACOMODAR EL CUERPO DEL HOMEPAGE EM 3 COLUMNAS IGUALES-->
         <style>
             .grid-container {
                 display: grid;
@@ -46,7 +48,8 @@
             }
 
         </style>         
-        
+
+<!--SE LLAMA AL FRAGMENTO FOOTER QUE SE ENCUENTRA EN LA RUTA layout/plantilla-->
         <footer th:replace="~{layout/plantilla :: footer}"/>          
     </body>
 </html>
